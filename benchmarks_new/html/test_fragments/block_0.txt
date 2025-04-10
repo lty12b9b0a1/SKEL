@@ -1,0 +1,60 @@
+name2codepoint = {
+    'AElig': 0x00c6
+};
+codepoint2name = {};
+entitydefs = {};
+for (var name in name2codepoint) {
+    var codepoint = name2codepoint[name];
+    codepoint2name[codepoint] = name;
+    entitydefs[name] = String.fromCharCode(codepoint);
+}
+
+_charref_regular_exp = tool_functions._charref_regular_exp
+_declname = tool_functions._declname
+
+_declstringlit = tool_functions._declstringlit
+_commentclose = tool_functions._commentclose
+_markedsectionclose = tool_functions._markedsectionclose
+_msmarkedsectionclose = tool_functions._msmarkedsectionclose
+interesting_normal = tool_functions.interesting_normal
+incomplete = tool_functions.incomplete
+entityref = tool_functions.entityref
+charref = tool_functions.charref
+starttagopen = tool_functions.starttagopen
+piclose = tool_functions.piclose
+commentclose = tool_functions.commentclose
+tagfind_tolerant = tool_functions.tagfind_tolerant
+attrfind_tolerant = tool_functions.attrfind_tolerant
+locatestarttagend_tolerant = tool_functions.locatestarttagend_tolerant
+endendtag = tool_functions.endendtag
+endtagfind = tool_functions.endtagfind
+_example_html = tool_functions._example_html;
+
+_charref_regular_exp_match = _charref_regular_exp.exec
+_declname_match = _declname.exec
+_declstringlit_match = _declstringlit.exec
+_commentclose_match = _commentclose.exec
+_declstringlit_match = _declstringlit.exec
+_declname_match = _declname.exec
+_declstringlit_match = _declstringlit.exec
+_declstringlit_match = _declstringlit.exec
+_markedsectionclose_match = _markedsectionclose.exec
+_msmarkedsectionclose_match = _msmarkedsectionclose.exec
+interesting_normal_match = interesting_normal.exec
+incomplete_match = incomplete.exec
+entityref_match = entityref.exec
+charref_match = charref.exec
+starttagopen_match = starttagopen.exec
+piclose_match = piclose.exec
+commentclose_match = commentclose.exec
+tagfind_tolerant_match = tagfind_tolerant.exec
+attrfind_tolerant_match = attrfind_tolerant.exec
+locatestarttagend_tolerant_match = locatestarttagend_tolerant.exec
+endendtag_match = endendtag.exec
+endtagfind_match = endtagfind.exec
+CDATA_CONTENT_ELEMENTS = ["script", "style"]
+SCAN_NAME_DEFAULT = [null, -1]
+listener_event_list = [];
+
+test();
+additional_tests();

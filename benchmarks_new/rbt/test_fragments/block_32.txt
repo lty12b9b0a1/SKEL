@@ -1,0 +1,23 @@
+tree = RedBlackTree(0, 0, null, null, null);
+    tree = tree.insert(-12);
+    tree = tree.insert(8);
+    tree = tree.insert(-8);
+    tree = tree.insert(15);
+    tree = tree.insert(4);
+    tree = tree.insert(12);
+    tree = tree.insert(10);
+    tree = tree.insert(9);
+    tree = tree.insert(11);
+    tree = tree.remove(15);
+    tree = tree.remove(-12);
+    tree = tree.remove(9);
+    if (!tree.check_color_properties()) {
+        var _return_value = false;
+        return _return_value;
+    }
+    if (Array.from(tree.inorder_traverse()).toString() !== [-8, 0, 4, 8, 10, 11, 12].toString()) {
+        var _return_value = false;
+        return _return_value;
+    }
+    var _return_value = true;
+    return _return_value;

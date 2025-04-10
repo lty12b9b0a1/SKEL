@@ -1,0 +1,19 @@
+tree = RedBlackTree(0, 0, null, null, null);
+    tree.insert(-16);
+    tree.insert(16);
+    tree.insert(8);
+    tree.insert(24);
+    tree.insert(20);
+    tree.insert(22);
+    tuples = [[-20, null, -16], [-10, -16, 0], [8, 8, 8], [50, 24, null]];
+    for (var i = 0; i < tuples.length; i++) {
+        var val = tuples[i][0];
+        var floor = tuples[i][1];
+        var ceil = tuples[i][2];
+        if (tree.floor(val) !== floor || tree.ceil(val) !== ceil) {
+            var _return_value = false;
+            return _return_value;
+        }
+    }
+    var _return_value = true;
+    return _return_value;

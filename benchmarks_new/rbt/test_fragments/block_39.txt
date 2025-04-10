@@ -1,0 +1,12 @@
+tree = RedBlackTree(0, 0, null, null, null)
+    console.assert(tree.__len__() == 1)
+
+    tree = RedBlackTree(0, 0, null, null, null)
+    tree.insert(-16).insert(16).insert(-8).insert(12)
+    tree.insert(-20).insert(8).insert(-4).insert(4)
+    tree.insert(-3).insert(24).insert(-20).insert(20)
+    tree.insert(-1).insert(2).insert(-3).insert(3)
+    tree.insert(10).insert(26)
+
+    tree.right.right.left._remove_repair()
+    console.assert(tree.right.right.left.label == 20)

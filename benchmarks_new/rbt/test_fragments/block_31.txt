@@ -1,0 +1,25 @@
+tree = RedBlackTree(0, 0, null, null, null);
+    tree.insert(8);
+    tree.insert(-8);
+    tree.insert(4);
+    tree.insert(12);
+    tree.insert(10);
+    tree.insert(11);
+    if (tree.__contains__(5) 
+        || tree.__contains__(-6) 
+        || tree.__contains__(-10) 
+        || tree.__contains__(13)) {
+        // Found something not in there
+        var _return_value = false;
+        return _return_value;
+    }
+    if (!(tree.__contains__(11) 
+        && tree.__contains__(12) 
+        && tree.__contains__(-8) 
+        && tree.__contains__(0))) {
+        // Didn't find something in there
+        var _return_value = false;
+        return _return_value;
+    }
+    var _return_value = true;
+    return _return_value;

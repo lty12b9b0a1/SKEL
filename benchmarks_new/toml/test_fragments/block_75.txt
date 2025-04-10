@@ -1,0 +1,13 @@
+decode_input = tool_functions.get_input(name)
+    decode_result = loads(decode_input, func_dict, null)
+    decode_result = tag(decode_result)
+
+    var encode_input = {};
+    for (var k in decode_result) {
+        if (decode_result.hasOwnProperty(k)) {
+            var v = convert(decode_result[k]);
+            encode_input[k] = v;
+        }
+    }
+
+    encode_result = dumps(encode_input, null)

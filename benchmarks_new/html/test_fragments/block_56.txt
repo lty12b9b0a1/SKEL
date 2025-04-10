@@ -1,0 +1,17 @@
+    p = MyHTMLParserTester(true)
+    p.convert_charrefs = false;
+    p.feed("&abc<")
+    p.reset()
+
+    p.convert_charrefs = false;
+    p.feed("&#abc<")
+    p.reset()
+
+    p.convert_charrefs = false;
+    p.feed("&<")
+    p.reset()
+
+    p.convert_charrefs = false;
+    p.feed("&#<")
+    p.reset()
+    p.close()

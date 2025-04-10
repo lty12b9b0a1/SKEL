@@ -1,0 +1,16 @@
+var fh = new FileHeader(input_str, 0x0);
+    var tmp_gen = fh["chunks"](false);
+    while(true){
+        var x = (tmp_gen).next();
+        if (x.done) break
+        var chunk = x.value;
+        var tmp_gen2 = chunk["records"]();
+        while(true){
+            var y = (tmp_gen2).next();
+            if (y.done) break
+            var record = y.value;
+            if (record["magic"]() !== 0x2A2A) {
+                throw new Error("Assertion failed");
+            }
+        }
+    }

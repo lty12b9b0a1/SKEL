@@ -1,0 +1,22 @@
+var TIME_RE = new RegExp("^([0-9]{2}):([0-9]{2}):([0-9]{2})(\\.([0-9]{3,6}))?$");
+
+var _number_with_underscores = new RegExp('([0-9])(_([0-9]))*');
+
+var _groupname_re = new RegExp('^[A-Za-z0-9_-]+$');
+
+var _escapes = [0, 'b', 'f', 'n', 'r', 't', '"'];
+var _escapedchars = ['\0', '\b', '\f', '\n', '\r', '\t', '\"'];
+var _escape_to_escapedchars = {};
+for (var index = 0; index < _escapes.length; index++) {
+    _escape_to_escapedchars[_escapes[index]] = _escapedchars[index];
+}
+
+TEST_STR = `
+[a]\r
+b = 1\r
+c = 2
+`
+
+TEST_DICT = {"a": {"b": 1, "c": 2}}
+
+test();

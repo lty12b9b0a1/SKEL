@@ -1,0 +1,4 @@
+t = _get_binary_search_tree();
+
+    console.assert(t.exists(6));
+    console.assert(!t.exists(-1));

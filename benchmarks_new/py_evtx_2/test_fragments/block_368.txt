@@ -1,0 +1,2 @@
+test_render_records(tool_functions.get_input("case1"))
+    console.log("All tests passed")

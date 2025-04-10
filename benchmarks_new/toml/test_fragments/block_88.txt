@@ -1,0 +1,7 @@
+var v = "\\\\";
+    var res = _unescape(v);
+    console.assert(res === '\\');
+    
+    v = "\\u";
+    res = _unescape(v);
+    console.assert(res === '\\u');

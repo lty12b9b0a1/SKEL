@@ -1,0 +1,2 @@
+console.log("Encountered comment    :", data);
+    listener_event_list.push(["comment", data]);

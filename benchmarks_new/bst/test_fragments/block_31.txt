@@ -1,0 +1,74 @@
+t = new BinarySearchTree();
+    t.put(8);
+    t.put(3);
+    t.put(6);
+    t.put(1);
+    t.put(10);
+    t.put(14);
+    t.put(13);
+    t.put(4);
+    t.put(7);
+    t.put(5);
+
+    console.log(
+        `
+            8
+           / \\
+          3   10
+         / \\    \\
+        1   6    14
+           / \\   /
+          4   7 13
+           \\
+            5
+        `
+    );
+
+    console.log("Label 6 exists:", t.exists(6));
+    console.log("Label 13 exists:", t.exists(13));
+    console.log("Label -1 exists:", t.exists(-1));
+    console.log("Label 12 exists:", t.exists(12));
+
+    // Prints all the elements of the list in inorder traversal
+    tmp = t.inorder_traversal()
+    var inorder_traversal_nodes = Array.from(tmp).map(function(i) { return i.label; });
+    console.log("Inorder traversal:", inorder_traversal_nodes);
+
+    // Prints all the elements of the list in preorder traversal
+    tmp = t.preorder_traversal()
+    var preorder_traversal_nodes = Array.from(tmp).map(function(i) { return i.label; });
+    console.log("Preorder traversal:", preorder_traversal_nodes);
+
+    console.log("Max. label:", t.get_max_label());
+    console.log("Min. label:", t.get_min_label());
+
+    // Delete elements
+    console.log("\nDeleting elements 13, 10, 8, 3, 6, 14");
+    console.log(
+        `
+          4
+         / \\
+        1   7
+             \\
+              5
+        `
+    );
+    t.remove(13);
+    t.remove(10);
+    t.remove(8);
+    t.remove(3);
+    t.remove(6);
+    t.remove(14);
+
+    // Prints all the elements of the list in inorder traversal after delete
+    tmp = t.inorder_traversal()
+    inorder_traversal_nodes = Array.from(tmp).map(function(i) { return i.label; });
+    console.log("Inorder traversal after delete:", inorder_traversal_nodes);
+
+    // Prints all the elements of the list in preorder traversal after delete
+    tmp = t.preorder_traversal()
+    preorder_traversal_nodes = Array.from(tmp).map(function(i) { return i.label; });
+    console.log("Preorder traversal after delete:", preorder_traversal_nodes);
+
+    console.log("Max. label:", t.get_max_label());
+    console.log("Min. label:", t.get_min_label());

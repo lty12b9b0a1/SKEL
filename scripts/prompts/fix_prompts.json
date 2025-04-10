@@ -1,0 +1,25 @@
+[
+    {
+        "source_code": "i = ans = 0\n    chars = set()\n    for j, c in enumerate(s):\n        while c in chars:\n            chars.remove(s[i])\n            i += 1\n        chars.add(c)\n        ans = max(ans, j - i + 1)\n    return ans\n",
+        "err_code": "var i = 0;\n    var ans = 0;\n    var chars = new Set();\n    for (var j = 0; j < s.length; j++) {\n        var c = s[j];\n        while (c in chars) {\n            chars.delete(s[i]);\n            i++;\n        }\n        chars.add(c);\n        ans = Math.max(ans, j - i + 1);\n    }\n    return ans;\n",
+        "err_msg": "[ERROR] Return Value Mismatch. The code is expected to return value 3 with type `number`, but it incorrectly return value 8.",
+        "transed_code": "var i = 0;\n    var ans = 0;\n    var chars = new Set();\n    for (var j = 0; j < s.length; j++) {\n        var c = s[j];\n        while (chars.has(c)) {\n            chars.delete(s[i]);\n            i++;\n        }\n        chars.add(c);\n        ans = Math.max(ans, j - i + 1);\n    }\n    return ans;\n",
+        "specs": [
+            {
+                "before_state": {
+                    "vars": {
+                        "s": "abcabcbb"
+                    },
+                    "object_table": {}
+                },
+                "after_state": {
+                    "vars": {
+                        "s": "abcabcbb",
+                        "return value": 3
+                    },
+                    "object_table": {}
+                }
+            }
+        ]
+    }
+]

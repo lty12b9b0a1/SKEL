@@ -1,0 +1,5 @@
+t = _get_binary_search_tree();
+
+    tmp = t.preorder_traversal();
+    preorder_traversal_nodes = Array.from(tmp).map(i => i.label);
+    console.assert(JSON.stringify(preorder_traversal_nodes) === JSON.stringify([8, 3, 1, 6, 4, 5, 7, 10, 14, 13]));

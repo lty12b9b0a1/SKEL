@@ -1,0 +1,2 @@
+console.log("charref  name:", name)
+        listener_event_list.push(["charref", name])

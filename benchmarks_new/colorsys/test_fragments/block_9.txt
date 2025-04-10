@@ -1,0 +1,6 @@
+    for (var index = 0; index < iter1.length && index < iter2.length; index++) {
+        var a = iter1[index];
+        var b = iter2[index];
+        user_assert_almost_equal(a, b);
+    }
+    return true;

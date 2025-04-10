@@ -1,0 +1,7 @@
+tree = RedBlackTree(-1, 0, null, null, null);
+    for (var i = 0; i < 10; i++) {
+        tree = tree.insert(i);
+    }
+    i = 0;
+    var _return_value = true;
+    return _return_value;

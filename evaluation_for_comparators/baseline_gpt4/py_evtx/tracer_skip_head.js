@@ -1,0 +1,2 @@
+var {get_input, user_infinite_counter, expected_output1, expected_output2, expected_output3, expected_output4, NAME_PATTERN} = require('./tracer_skip.js');
+var tool_functions = {"get_input": get_input, "user_infinite_counter": user_infinite_counter, "expected_output1": expected_output1, "expected_output2": expected_output2, "expected_output3": expected_output3, "expected_output4": expected_output4, "NAME_PATTERN": NAME_PATTERN};

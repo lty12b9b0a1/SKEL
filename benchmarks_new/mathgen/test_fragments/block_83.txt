@@ -1,0 +1,35 @@
+tmp = combinations(20)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Find the number of combinations from &14& objects picked &8& at a time.')
+    assert_equal(b, '&3003&')
+    tmp = conditional_probability()
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Someone tested positive for a nasty disease which only &0.61&% of the population have. Test sensitivity (true positive) is equal to &SN=99.29&% whereas test specificity (true negative) &SP=94.91&%. What is the probability that this guy really has that disease?')
+    assert_equal(b, '&10.69&%')
+    tmp = confidence_interval()
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'The confidence interval for sample &[229, 231, 242, 225, 252, 290, 270, 227, 231, 258, 296, 243, 247, 232, 276, 272, 237, 240, 235, 220, 238, 292, 289]& with &80&% confidence is')
+    assert_equal(b, '&(257.29, 244.62)&')
+    tmp = data_summary(15, 5, 50)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Find the mean,standard deviation and variance for the data &40, 29, 33, 26, 26, 36, 7, 43, 16, 25, 17, 25, 28, 11, 13&')
+    assert_equal(b, 'The Mean is &25.0&, Standard Deviation is &104.67&, Variance is &10.23&')
+    tmp = dice_sum_probability(3)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'If &2& dice are rolled at the same time, the probability of getting a sum of &2 =&')
+    assert_equal(b, '\\frac{1}{36}')
+    tmp = mean_median(10)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Given the series of numbers &[2, 2, 11, 16, 19, 25, 26, 38, 46, 78]&. Find the arithmatic mean and median of the series')
+    assert_equal(b, 'Arithmetic mean of the series is &26.3& and arithmetic median of this series is &22.0&')
+    tmp = permutation(20)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Number of Permutations from &12& objects picked &8& at a time is: ')
+    assert_equal(b, '&19958400&')

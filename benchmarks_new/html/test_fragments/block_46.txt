@@ -1,0 +1,2 @@
+console.log("Encountered an end tag :", tag);
+    listener_event_list.push(["endtag", tag]);

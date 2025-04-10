@@ -1,0 +1,3 @@
+if (a !== b) {
+    throw new Error("MyLogError MISMATCH");
+}

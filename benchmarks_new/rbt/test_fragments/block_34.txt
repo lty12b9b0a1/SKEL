@@ -1,0 +1,13 @@
+tree = RedBlackTree(0, 0, null, null, null);
+    tree.insert(-16);
+    tree.insert(16);
+    tree.insert(8);
+    tree.insert(24);
+    tree.insert(20);
+    tree.insert(22);
+    if (tree.get_max() !== 24 || tree.get_min() !== -16) {
+        var _return_value = false;
+        return _return_value;
+    }
+    var _return_value = true;
+    return _return_value;

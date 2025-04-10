@@ -1,0 +1,7 @@
+    p = MyHTMLParserTester(true);
+    p.feed(_example_html);
+    // console.log("----- call functions -----");
+    listener_event_list.push(["PRINT", p.getpos()]);
+    listener_event_list.push(["PRINT", p.get_starttag_text()]);
+    listener_event_list.push(["PRINT", p.parse_declaration(0)]);
+    p.close();

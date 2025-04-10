@@ -1,0 +1,37 @@
+// Make a tree to test on
+var tree = RedBlackTree(0, 0, null, null, null);
+tree.left = RedBlackTree(-10, 0, tree, null, null);
+tree.right = RedBlackTree(10, 0, tree, null, null);
+tree.left.left = RedBlackTree(-20, 0, tree.left, null, null);
+tree.left.right = RedBlackTree(-5, 0, tree.left, null, null);
+tree.right.left = RedBlackTree(5, 0, tree.right, null, null);
+tree.right.right = RedBlackTree(20, 0, tree.right, null, null);
+// Make the right rotation
+var left_rot = RedBlackTree(10, 0, null, null, null);
+left_rot.left = RedBlackTree(0, 0, left_rot, null, null);
+left_rot.left.left = RedBlackTree(-10, 0, left_rot.left, null, null);
+left_rot.left.right = RedBlackTree(5, 0, left_rot.left, null, null);
+left_rot.left.left.left = RedBlackTree(-20, 0, left_rot.left.left, null, null);
+left_rot.left.left.right = RedBlackTree(-5, 0, left_rot.left.left, null, null);
+left_rot.right = RedBlackTree(20, 0, left_rot, null, null);
+tree = tree.rotate_left();
+if (!tree.__eq__(left_rot)) {
+    _return_value = false;
+    return _return_value;
+}
+tree = tree.rotate_right();
+tree = tree.rotate_right();
+// Make the left rotation
+var right_rot = RedBlackTree(-10, 0, null, null, null);
+right_rot.left = RedBlackTree(-20, 0, right_rot, null, null);
+right_rot.right = RedBlackTree(0, 0, right_rot, null, null);
+right_rot.right.left = RedBlackTree(-5, 0, right_rot.right, null, null);
+right_rot.right.right = RedBlackTree(10, 0, right_rot.right, null, null);
+right_rot.right.right.left = RedBlackTree(5, 0, right_rot.right.right, null, null);
+right_rot.right.right.right = RedBlackTree(20, 0, right_rot.right.right, null, null);
+if (!tree.__eq__(right_rot)) {
+    _return_value = false;
+    return _return_value;
+}
+_return_value = true;
+return _return_value;

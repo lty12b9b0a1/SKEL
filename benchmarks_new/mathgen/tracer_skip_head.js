@@ -1,0 +1,1 @@
+var {user_hash_random, user_randint, user_choice_func1, user_choice_func2, user_sample_func1, user_sample_func2, user_uniform, user_reset_seed, _factorial, _greatest_common_divisor, get_seed, set_seed} = require('./tracer_skip.js');

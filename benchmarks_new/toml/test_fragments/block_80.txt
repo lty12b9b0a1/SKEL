@@ -1,0 +1,6 @@
+d = {"a": [3, 4]}
+    var encoder = TomlEncoder(func_dict, false)
+    tmp = dumps(d, encoder)
+    o = loads(tmp, func_dict, null)
+    tmp2 = dumps(o, encoder)
+    console.assert(JSON.stringify(o) === JSON.stringify(loads(tmp2, func_dict, null)))

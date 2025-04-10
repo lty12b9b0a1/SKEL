@@ -1,0 +1,6 @@
+var decoder = new TomlDecoder(func_dict);
+    var cur = {};
+    var multikey = false;
+    var multibackslash = false;
+    decoder.load_line("'a.x'=2=3", cur, multikey, multibackslash);
+    console.assert(JSON.stringify(cur) === JSON.stringify({'a.x': {'=2': 3}}));

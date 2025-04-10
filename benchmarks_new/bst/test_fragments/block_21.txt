@@ -1,0 +1,13 @@
+t = _get_binary_search_tree();
+
+    node = t.search(6);
+    if (node.label !== 6) throw new Error('Assertion failed');
+
+    node = t.search(13);
+    if (node.label !== 13) throw new Error('Assertion failed');
+
+    try {
+        t.search(2);
+    } catch (exception) {
+        // pass
+    }

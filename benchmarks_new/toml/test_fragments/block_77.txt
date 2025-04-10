@@ -1,0 +1,1 @@
+console.assert(loads(TEST_STR, func_dict, null) instanceof Object)

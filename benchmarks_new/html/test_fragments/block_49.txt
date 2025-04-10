@@ -1,0 +1,2 @@
+console.log("entityref:", name)
+        listener_event_list.push(["entityref", name])

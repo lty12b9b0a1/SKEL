@@ -1,0 +1,9 @@
+var fh = new FileHeader(input_str, 0x0);
+
+    var chunk = fh["chunks"](false).next().value;
+    var record = chunk["records"]().next().value;
+
+    var xml = record["xml"]();
+    if (JSON.stringify(xml) !== JSON.stringify(tool_functions.expected_output4)) {
+        throw new Error("Assertion failed");
+    }

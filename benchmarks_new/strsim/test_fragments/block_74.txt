@@ -1,0 +1,31 @@
+var a = new NormalizedLevenshtein();
+    var s0 = "";
+    var s1 = "";
+    var s2 = input_shanghai
+    s3 = input_shanghai_city
+
+    assert_equal(
+        a.distance(s0, s1), 0.0);
+    assert_equal(
+        a.distance(s0, s2), 1.0);
+    assert_equal(
+        a.distance(s0, s3), 1.0);
+    assert_equal(
+        a.distance(s1, s2), 1.0);
+    assert_equal(
+        a.distance(s1, s3), 1.0);
+    assert_equal(
+        Math.round(a.distance(s2, s3) * 100) / 100, 0.33);
+
+    assert_equal(
+        a.similarity(s0, s1), 1.0);
+    assert_equal(
+        a.similarity(s0, s2), 0.0);
+    assert_equal(
+        a.similarity(s0, s3), 0.0);
+    assert_equal(
+        a.similarity(s1, s2), 0.0);
+    assert_equal(
+        a.similarity(s1, s3), 0.0);
+    assert_equal(
+        Math.round(a.similarity(s2, s3) * 100) / 100, 0.67);

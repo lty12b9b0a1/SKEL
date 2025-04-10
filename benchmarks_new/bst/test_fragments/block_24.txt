@@ -1,0 +1,3 @@
+t = _get_binary_search_tree();
+    t.empty();
+    console.assert(t.root === null);

@@ -1,0 +1,29 @@
+    var fh = new FileHeader(input_str, 0x0);
+    // collected empirically
+    var expecteds = tool_functions.expected_output2;
+    var tmp_gen = fh["chunks"](false);
+
+    var i = 0;
+
+    while(true){
+        var x = (tmp_gen).next();
+        if (x.done) break
+        var chunk = x.value;
+        if (i < 26) {
+            console.assert(chunk["check_magic"]() === true);
+            console.assert(chunk["magic"]() === "ElfChnk\x00");
+            console.assert(chunk["calculate_header_checksum"]() === chunk["header_checksum"]());
+            console.assert(chunk["calculate_data_checksum"]() === chunk["data_checksum"]());
+
+            var expected = expecteds[i];
+            console.assert(chunk["file_first_record_number"]() === expected["start_file"]);
+            console.assert(chunk["file_last_record_number"]() === expected["end_file"]);
+            console.assert(chunk["log_first_record_number"]() === expected["start_log"]);
+            console.assert(chunk["log_last_record_number"]() === expected["end_log"]);
+
+        } else {
+            console.assert(chunk["check_magic"]() === false);
+            console.assert(chunk["magic"]() === EMPTY_MAGIC);
+        }
+        i++;
+    }

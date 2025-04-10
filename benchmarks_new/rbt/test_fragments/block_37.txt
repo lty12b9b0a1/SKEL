@@ -1,0 +1,4 @@
+    if (!passes){
+        throw new Error(msg.toString() + " doesn't work :(");
+    }
+    console.log(msg.toString() + (passes ? " works!" : " doesn't work :("));

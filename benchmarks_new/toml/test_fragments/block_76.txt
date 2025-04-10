@@ -1,0 +1,3 @@
+console.assert('a = "\\u0064"\n' == dumps({'a': '\\x64'}, null))
+    console.assert('a = "\\\\x64"\n' == dumps({'a': '\\\\x64'}, null))
+    console.assert('a = "\\\\\\u0064"\n' == dumps({'a': '\\\\\\x64'}, null))

@@ -1,0 +1,3 @@
+var _SPACE_PATTERN = new RegExp("\\s+", "g");
+
+test()

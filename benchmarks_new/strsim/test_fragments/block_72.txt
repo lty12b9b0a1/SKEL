@@ -1,0 +1,66 @@
+var jaccard = Jaccard(1);
+    var s = ['', ' ', 'Shanghai', 'ShangHai', 'Shang Hai'];
+    assert_equal(0.0000, 
+        parseFloat(jaccard.distance(s[0], s[0]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(jaccard.similarity(s[0], s[0]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(jaccard.distance(s[0], s[1]).toFixed(4)));
+    assert_equal(0.0000, 
+        parseFloat(jaccard.similarity(s[0], s[1]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(jaccard.distance(s[0], s[2]).toFixed(4)));
+    assert_equal(0.0000, 
+        parseFloat(jaccard.similarity(s[0], s[2]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(jaccard.distance(s[0], s[3]).toFixed(4)));
+    assert_equal(0.0000, 
+        parseFloat(jaccard.similarity(s[0], s[3]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(jaccard.distance(s[0], s[4]).toFixed(4)));
+    assert_equal(0.0000, 
+        parseFloat(jaccard.similarity(s[0], s[4]).toFixed(4)));
+
+    assert_equal(0.0000, 
+        parseFloat(jaccard.distance(s[1], s[1]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(jaccard.similarity(s[1], s[1]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(jaccard.distance(s[1], s[2]).toFixed(4)));
+    assert_equal(0.0000, 
+        parseFloat(jaccard.similarity(s[1], s[2]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(jaccard.distance(s[1], s[3]).toFixed(4)));
+    assert_equal(0.0000, 
+        parseFloat(jaccard.similarity(s[1], s[3]).toFixed(4)));
+    assert_equal(0.8750, 
+        parseFloat(jaccard.distance(s[1], s[4]).toFixed(4)));
+    assert_equal(0.1250, 
+        parseFloat(jaccard.similarity(s[1], s[4]).toFixed(4)));
+
+    assert_equal(0.0000, 
+        parseFloat(jaccard.distance(s[2], s[2]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(jaccard.similarity(s[2], s[2]).toFixed(4)));
+    assert_equal(0.1429, 
+        parseFloat(jaccard.distance(s[2], s[3]).toFixed(4)));
+    assert_equal(0.8571, 
+        parseFloat(jaccard.similarity(s[2], s[3]).toFixed(4)));
+    assert_equal(0.2500, 
+        parseFloat(jaccard.distance(s[2], s[4]).toFixed(4)));
+    assert_equal(0.7500, 
+        parseFloat(jaccard.similarity(s[2], s[4]).toFixed(4)));
+
+    assert_equal(0.0000, 
+        parseFloat(jaccard.distance(s[3], s[3]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(jaccard.similarity(s[3], s[3]).toFixed(4)));
+    assert_equal(0.1250, 
+        parseFloat(jaccard.distance(s[3], s[4]).toFixed(4)));
+    assert_equal(0.8750, 
+        parseFloat(jaccard.similarity(s[3], s[4]).toFixed(4)));
+    
+    assert_equal(0.0000, 
+        parseFloat(jaccard.distance(s[4], s[4]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(jaccard.similarity(s[4], s[4]).toFixed(4)));

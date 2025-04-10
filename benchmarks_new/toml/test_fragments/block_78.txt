@@ -1,0 +1,2 @@
+_test_dict_decoder = TomlDecoder(func_dict)
+    console.assert((loads(TEST_STR, func_dict, _test_dict_decoder) instanceof Object))

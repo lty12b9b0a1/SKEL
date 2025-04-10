@@ -1,0 +1,29 @@
+var heap = [1];
+    var tmp = heappop(heap);
+    assert_value_equal(tmp, 1);
+    
+    heap = [1];
+    tmp = _heappop_max(heap);
+    assert_value_equal(tmp, 1);
+
+    tmp = nsmallest(0, [1]);
+    assert_equal(tmp, []);
+    
+    tmp = nsmallest(2, []);
+    assert_equal(tmp, []);
+
+    tmp = nsmallest(0, []);
+    assert_equal(tmp, []);
+
+    tmp = nlargest(0, [1]);
+    assert_equal(tmp, []);
+    
+    tmp = nlargest(2, []);
+    assert_equal(tmp, []);
+
+    tmp = nlargest(0, []);
+    assert_equal(tmp, []);
+
+    heap = [1, 2, 3];
+    tmp = _siftup_max(heap, 0);
+    assert_equal(heap, [3, 2, 1]);

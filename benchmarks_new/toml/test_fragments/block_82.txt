@@ -1,0 +1,10 @@
+tmp = loads(tool_functions.test_str, func_dict, TomlPreserveCommentDecoder(func_dict))
+    s = dumps(tmp, TomlPreserveCommentEncoder(func_dict, false))
+    if (
+        s.length === test_str.length &&
+        [...s].sort().join('') === [...test_str].sort().join('')
+    ) {
+        console.log("Assertion passed!");
+    } else {
+        console.error("Assertion failed!");
+    }

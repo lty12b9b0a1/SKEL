@@ -1,0 +1,9 @@
+test_1();
+    user_reset_seed();
+    test_2();
+    user_reset_seed();
+    test_3();
+    user_reset_seed();
+    test_4();
+    user_reset_seed();
+    additional_tests();

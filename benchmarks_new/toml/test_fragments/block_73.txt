@@ -1,0 +1,31 @@
+if (Array.isArray(v)) {
+        var _return_value = v.map(vv => convert(vv));
+        return _return_value;
+    } else if (v['type'] === undefined || v['value'] === undefined) {
+        var _return_value = {};
+        for (var k in v) {
+            _return_value[k] = convert(v[k]);
+        }
+        return _return_value;
+    } else if (v['type'] === 'string') {
+        var _return_value = v['value'];
+        return _return_value;
+    } else if (v['type'] === 'integer') {
+        var _return_value = parseInt(v['value']);
+        return _return_value;
+    } else if (v['type'] === 'float') {
+        if (v['value'] === 'inf') {
+            var _return_value = Infinity;
+            return _return_value;
+        }
+        var _return_value = parseFloat(v['value']);
+        return _return_value;
+    } else if (v['type'] === 'bool') {
+        var _return_value = v['value'] === 'true';
+        return _return_value;
+    } else if (['datetime', 'datetime-local', 'date-local', 'time-local'].includes(v['type'])) {
+        var _return_value = loads('a=' + v['value'], func_dict, null)['a']
+        return _return_value
+    } else {
+        throw new Error('unknown type: ' + v['type']);
+    }

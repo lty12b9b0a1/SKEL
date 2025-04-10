@@ -1,0 +1,110 @@
+tmp = absolute_difference(100, 100)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, '&|-16-66|=&')
+    assert_equal(b, '&82&')
+    tmp = addition(99, 50)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, '&15+14=&')
+    assert_equal(b, '&29&')
+    tmp = compare_fractions(10)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Which symbol represents the comparison between &\\frac{10}{1}& and &\\frac{5}{2}&?')
+    assert_equal(b, '>')
+    tmp = cube_root(1, 1000)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'What is the cube root of: &\\sqrt[3]{291}=& to 2 decimal places?')
+    assert_equal(b, '&6.63&')
+    tmp = divide_fractions(10)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, '&\\frac{4}{5}\\div\\frac{3}{6}=&')
+    assert_equal(b, '&\\frac{8}{5}&')
+    tmp = division(25, 25)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, '&414\\div23=&')
+    assert_equal(b, '&18&')
+    tmp = exponentiation(20, 10)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, '&7^{6}=&')
+    assert_equal(b, '&117649&')
+    tmp = factorial(6)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, '&6! =&')
+    assert_equal(b, '&720&')
+    tmp = fraction_multiplication(10)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, '&\\frac{5}{8}\\cdot\\frac{4}{8}=&')
+    assert_equal(b, '&\\frac{5}{16}&')
+    tmp = fraction_to_decimal(99, 99)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, '&37\\div40=&')
+    assert_equal(b, '&0.93&')
+    tmp = greatest_common_divisor(2, 10**3)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, '&GCD(351,207)=&')
+    assert_equal(b, '&9&')
+    tmp = is_composite(250)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Is &97& composite?')
+    assert_equal(b, 'No')
+    tmp = is_prime(100)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Is &92& prime?')
+    assert_equal(b, 'No')
+    tmp = multiplication(12)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, '&11\\cdot10=&')
+    assert_equal(b, '&110&')
+    tmp = percentage(99, 99)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'What is &53&% of &62&?')
+    assert_equal(b, '&32.86&')
+    tmp = percentage_difference(200, 0)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'What is the percentage difference between &93& and &96&?')
+    assert_equal(b, '&3.17&%')
+    tmp = percentage_error(100, -100)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Find the percentage error when observed value equals &-37& and exact value equals &-91&.')
+    assert_equal(b, '&59.34&%')
+    tmp = power_of_powers(50, 10)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Simplify &42^{3^{5}}&')
+    assert_equal(b, '&42^{15}&')
+    tmp = square(20)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, '&6^2=&')
+    assert_equal(b, '&36&')
+    tmp = square_root(1, 12)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, '&\\sqrt{36}=&')
+    assert_equal(b, '&6&')
+    tmp = simplify_square_root(100)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, '&\\sqrt{20}&')
+    assert_equal(b, '&2\\sqrt{5}&')
+    tmp = subtraction(99, 99)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, '&59-3=&')
+    assert_equal(b, '&56&')

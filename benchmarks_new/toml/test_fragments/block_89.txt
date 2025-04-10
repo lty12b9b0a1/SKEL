@@ -1,0 +1,7 @@
+var s = "['\"test\"']";
+    var t = loads(s, func_dict, null);
+    console.assert(JSON.stringify(t) === JSON.stringify({'"test"': {}}));
+    
+    s = "[\"abc\"]";
+    t = loads(s, func_dict, null);
+    console.assert(JSON.stringify(t) === JSON.stringify({'abc': {}}));

@@ -1,0 +1,165 @@
+tmp = angle_btw_vectors(20)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'angle between the vectors [829.89, 304.8, 293.49, 934.28, 906.11, 472.69, 173.37, 99.0, 290.11] and [311.65, 419.22, 249.45, 520.14, 899.08, 693.34, 270.07, 307.76, 578.14] is:')
+    assert_equal(b, '0.49 radians')
+    tmp = angle_regular_polygon(3, 20)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Find the angle of a regular polygon with 20 sides')
+    assert_equal(b, '162.0')
+    tmp = arc_length(49, 359)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Given radius, 22 and angle, 169. Find the arc length of the angle.')
+    assert_equal(b, 'Arc length of the angle = 64.89134')
+    tmp = area_of_circle(100)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Area of circle with radius 32=')
+    assert_equal(b, '3216.99')
+    tmp = area_of_circle_given_center_and_point(10, 10)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Area of circle with center (5,-3) and passing through (9.32, 3.7300000000000004) is')
+    assert_equal(b, '201.06')
+    tmp = area_of_triangle(20, 20)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Area of triangle with side lengths: 8, 5, 7 = ')
+    assert_equal(b, '17.32')
+    tmp = circumference(100)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Circumference of circle with radius 92 = ')
+    assert_equal(b, '578.05')
+    tmp = complementary_and_supplementary_angle(180, 90)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'The complementary angle of 70 =')
+    assert_equal(b, '20')
+    tmp = curved_surface_area_cylinder(49, 99)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'What is the curved surface area of a cylinder of radius, 26 and height, 62?')
+    assert_equal(b, '10128.49')
+    tmp = degree_to_rad(360)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Angle 167 degrees in radians is: ')
+    assert_equal(b, '2.91')
+    tmp = equation_of_line_from_two_points(20, -20)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'What is the equation of the line between points (-1,-19) and (7,14) in slope-intercept form?')
+    assert_equal(b, '8y = 33x -119')
+    tmp = fourth_angle_of_quadrilateral(180)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Fourth angle of quadrilateral with angles 44 , 89, 56 =')
+    assert_equal(b, '171')
+    tmp = pythagorean_theorem(20)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'What is the hypotenuse of a right triangle given the other two sides have lengths 9 and 11?')
+    assert_equal(b, '14.21')
+    tmp = radian_to_deg(6.28)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Angle 0.93 radians in degrees is: ')
+    assert_equal(b, '53.29')
+    tmp = sector_area(49, 359)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'What is the area of a sector with radius 10 and angle 214 degrees?')
+    assert_equal(b, '186.75')
+    tmp = sum_of_polygon_angles(12)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'What is the sum of interior angles of a polygon with 3 sides?')
+    assert_equal(b, '180')
+    tmp = surface_area_cone(20, 50, 'm')
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Surface area of cone with height = 6m and radius = 1m is')
+    assert_equal(b, '22 m^2')
+    tmp = surface_area_cube(20, 'm')
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Surface area of cube with side = 6m is')
+    assert_equal(b, '216 m^2')
+    tmp = surface_area_cuboid(20, 'm')
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Surface area of cuboid with sides of lengths: 4m, 4m, 1m is')
+    assert_equal(b, '48 m^2')
+    tmp = surface_area_cylinder(20, 50, 'm')
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Surface area of cylinder with height = 24m and radius = 16m is')
+    assert_equal(b, '4021 m^2')
+    tmp = surface_area_pyramid('m')
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Surface area of pyramid with base length = 40m, base width = 32m, and height = 12m is')
+    assert_equal(b, '2560 m^2')
+    tmp = surface_area_sphere(20, 'm')
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Surface area of a sphere with radius = 2m is')
+    assert_equal(b, '50.27 m^2')
+    tmp = third_angle_of_triangle(89)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Third angle of triangle with angles 21 and 26 = ')
+    assert_equal(b, '133')
+    tmp = valid_triangle(50)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Does triangle with sides 32, 39 and 50 exist?')
+    assert_equal(b, 'yes')
+    tmp = volume_cone(20, 50, 'm')
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Volume of cone with height = 25m and radius = 11m is')
+    assert_equal(b, '3167 m^3')
+    tmp = volume_cube(20, 'm')
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Volume of cube with a side length of 12m is')
+    assert_equal(b, '1728 m^3')
+    tmp = volume_cuboid(20, 'm')
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Volume of cuboid with sides = 19m, 20m, 20m is')
+    assert_equal(b, '7600 m^3')
+    tmp = volume_cylinder(20, 50, 'm')
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Volume of cylinder with height = 33m and radius = 5m is')
+    assert_equal(b, '2591 m^3')
+    tmp = volume_cone_frustum(20, 20, 50, 'm')
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Volume of frustum with height = 30m and r1 = 6m is and r2 = 7m is ')
+    assert_equal(b, '3989.82 m^3')
+    tmp = volume_hemisphere(100)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Volume of hemisphere with radius 65 m = ')
+    assert_equal(b, '575173.25 m^3')
+    tmp = volume_pyramid(20, 20, 50, 'm')
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Volume of pyramid with base length = 15 m, base width = 6 m and height = 36 m is')
+    assert_equal(b, '1080.0 m^3')
+    tmp = volume_sphere(100)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'Volume of sphere with radius 27 m = ')
+    assert_equal(b, '82447.96 m^3')
+    tmp = perimeter_of_polygons(12, 120)
+    a = tmp[0]
+    b = tmp[1]
+    assert_equal(a, 'The perimeter of a 10 sided polygon with lengths of 66, 97, 50, 14, 62, 52, 107, 82, 58, 101cm is: ')
+    assert_equal(b, '689')

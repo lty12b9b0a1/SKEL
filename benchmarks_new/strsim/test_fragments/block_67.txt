@@ -1,0 +1,12 @@
+a = LongestCommonSubsequence()
+    s0 = ""
+    s1 = ""
+    s2 = input_shanghai
+    s3 = input_shanghai_city
+    assert_equal(0, a.distance(s0, s1))
+    assert_equal(2, a.distance(s0, s2))
+    assert_equal(3, a.distance(s0, s3))
+    assert_equal(1, a.distance(s2, s3))
+    assert_equal(2, a.length(s2, s3))
+    assert_equal(4, a.distance('AGCAT', 'GAC'))
+    assert_equal(2, a.length('AGCAT', 'GAC'))

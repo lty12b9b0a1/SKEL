@@ -1,0 +1,15 @@
+var fh = new FileHeader(input_str, 0x0);
+
+    // collected empirically
+    console.assert(fh["magic"]() === "ElfFile\x00");
+    console.assert(fh["major_version"]() === 0x3);
+    console.assert(fh["minor_version"]() === 0x1);
+    console.assert(fh["flags"]() === 0x1);
+    console.assert(fh["is_dirty"]() === true);
+    console.assert(fh["is_full"]() === false);
+    console.assert(fh["current_chunk_number"]() === 0x8);
+    console.assert(fh["chunk_count"]() === 0x9);
+    console.assert(fh["oldest_chunk"]() === 0x0);
+    console.assert(fh["next_record_number"]() === 0x34D8);
+    console.assert(fh["checksum"]() === 0x41B4B1EC);
+    console.assert(fh["calculate_checksum"]() === fh["checksum"]());

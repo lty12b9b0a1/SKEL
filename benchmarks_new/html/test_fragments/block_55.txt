@@ -1,0 +1,26 @@
+    p = MyHTMLParserTester(true);
+    p.rawdata = "<!DOCTYPE html>"
+    parse_res = p.parse_declaration(0)
+    console.assert(parse_res == 15)
+    p.reset()
+
+    p.rawdata = "<!DOCTYPE '2'>"
+    parse_res = p.parse_declaration(0)
+    console.assert(parse_res == 14)
+    p.reset()
+
+    p.rawdata = "<!DOCTYPE [<!-->]> "
+    parse_res = p.parse_declaration(0)
+    console.assert(parse_res == -1)
+    p.reset()
+
+    p.rawdata = "<!DOCTYPE [%hello]> "
+    parse_res = p.parse_declaration(0)
+    console.assert(parse_res == 19)
+    p.reset()
+
+    p.rawdata = "<!DOCTYPE [ ]> "
+    parse_res = p.parse_declaration(0)
+    console.assert(parse_res == 14)
+    p.reset()
+    p.close()

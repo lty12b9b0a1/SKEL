@@ -1,0 +1,7 @@
+var a = SorensenDice(2);
+    var s2 = input_shanghai
+    s3 = input_shanghai_city
+    assert_equal(
+        Math.round(a.distance(s2, s3) * 100) / 100, 0.33);
+    assert_equal(
+        Math.round(a.similarity(s2, s3) * 100) / 100, 0.67);

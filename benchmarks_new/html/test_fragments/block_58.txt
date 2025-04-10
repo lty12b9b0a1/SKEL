@@ -1,0 +1,26 @@
+    p = HTMLParser(true)
+    p.rawdata = "<abc/"
+    parse_res = p.check_for_whole_start_tag(0)
+    console.assert(parse_res == -1)
+    p.reset()
+    p.rawdata = '<tagname attr="value'
+    parse_res = p.check_for_whole_start_tag(0)
+    console.assert(parse_res == -1)
+    p.reset()
+    p.rawdata = '<tagname attr'
+    parse_res = p.check_for_whole_start_tag(0)
+    console.assert(parse_res == -1)
+    p.reset()
+    p.rawdata = '<tagname /'
+    parse_res = p.check_for_whole_start_tag(0)
+    console.assert(parse_res == -1)
+    p.reset()
+    p.rawdata = '<tagname attr = "value" /'
+    parse_res = p.check_for_whole_start_tag(0)
+    console.assert(parse_res == -1)
+    p.reset()
+    p.rawdata = '<tagname "value" /'
+    parse_res = p.check_for_whole_start_tag(0)
+    console.assert(parse_res == -1)
+    p.reset()
+    p.close()

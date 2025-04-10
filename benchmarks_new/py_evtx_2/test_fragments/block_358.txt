@@ -1,0 +1,8 @@
+var fh = new FileHeader(input_str, 0x0);
+    var chunk = fh["chunks"](false).next().value;
+    var record = chunk["records"]().next().value;
+
+    var expected = tool_functions.expected_output3;
+    if (JSON.stringify(extract_structure(record['root']())) !== JSON.stringify(expected)) {
+        throw new Error("Assertion failed");
+    }

@@ -1,0 +1,5 @@
+var v = "abc\\";
+    var hexbytes = ['0064'];
+    var prefix = 'u';
+    var res = _load_unicode_escapes(v, hexbytes, prefix);
+    console.assert(res === 'abc\\u0064');

@@ -1,0 +1,21 @@
+    p = HTMLParser(true)
+    p.rawdata = "element>"
+    p._parse_doctype_element(0, 0)
+    p.reset()
+
+    p.rawdata = "attlist element"
+    p._parse_doctype_attlist(0, 0)
+    p.reset()
+
+    p.rawdata = "notation element"
+    p._parse_doctype_notation(0, 0)
+    p.reset()
+
+    p.rawdata = "notation'"
+    p._parse_doctype_notation(0, 0)
+    p.reset()
+
+    p.rawdata = "%element element"
+    p._parse_doctype_entity(0, 0)
+    p.reset()
+    p.close()

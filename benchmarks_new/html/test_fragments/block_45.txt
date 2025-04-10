@@ -1,0 +1,2 @@
+console.log("Encountered a start tag:", tag, attrs);
+    listener_event_list.push(["starttag", tag, attrs]);

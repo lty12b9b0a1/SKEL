@@ -1,0 +1,66 @@
+cos = Cosine(1);
+    s = ['', ' ', 'Shanghai', 'ShangHai', 'Shang Hai'];
+    assert_equal(0.0000, 
+        parseFloat(cos.distance(s[0], s[0]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(cos.similarity(s[0], s[0]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(cos.distance(s[0], s[1]).toFixed(4)));
+    assert_equal(0.0000, 
+        parseFloat(cos.similarity(s[0], s[1]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(cos.distance(s[0], s[2]).toFixed(4)));
+    assert_equal(0.0000, 
+        parseFloat(cos.similarity(s[0], s[2]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(cos.distance(s[0], s[3]).toFixed(4)));
+    assert_equal(0.0000, 
+        parseFloat(cos.similarity(s[0], s[3]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(cos.distance(s[0], s[4]).toFixed(4)));
+    assert_equal(0.0000, 
+        parseFloat(cos.similarity(s[0], s[4]).toFixed(4)));
+
+    assert_equal(0.0000, 
+        parseFloat(cos.distance(s[1], s[1]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(cos.similarity(s[1], s[1]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(cos.distance(s[1], s[2]).toFixed(4)));
+    assert_equal(0.0000, 
+        parseFloat(cos.similarity(s[1], s[2]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(cos.distance(s[1], s[3]).toFixed(4)));
+    assert_equal(0.0000, 
+        parseFloat(cos.similarity(s[1], s[3]).toFixed(4)));
+    assert_equal(0.6985, 
+        parseFloat(cos.distance(s[1], s[4]).toFixed(4)));
+    assert_equal(0.3015, 
+        parseFloat(cos.similarity(s[1], s[4]).toFixed(4)));
+
+    assert_equal(0.0000, 
+        parseFloat(cos.distance(s[2], s[2]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(cos.similarity(s[2], s[2]).toFixed(4)));
+    assert_equal(0.0871, 
+        parseFloat(cos.distance(s[2], s[3]).toFixed(4)));
+    assert_equal(0.9129, 
+        parseFloat(cos.similarity(s[2], s[3]).toFixed(4)));
+    assert_equal(0.1296, 
+        parseFloat(cos.distance(s[2], s[4]).toFixed(4)));
+    assert_equal(0.8704, 
+        parseFloat(cos.similarity(s[2], s[4]).toFixed(4)));
+
+    assert_equal(0.0000, 
+        parseFloat(cos.distance(s[3], s[3]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(cos.similarity(s[3], s[3]).toFixed(4)));
+    assert_equal(0.0465, 
+        parseFloat(cos.distance(s[3], s[4]).toFixed(4)));
+    assert_equal(0.9535, 
+        parseFloat(cos.similarity(s[3], s[4]).toFixed(4)));
+    
+    assert_equal(0.0000, 
+        parseFloat(cos.distance(s[4], s[4]).toFixed(4)));
+    assert_equal(1.0000, 
+        parseFloat(cos.similarity(s[4], s[4]).toFixed(4)));

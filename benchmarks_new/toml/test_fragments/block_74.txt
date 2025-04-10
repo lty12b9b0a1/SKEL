@@ -1,0 +1,55 @@
+if (value instanceof Object && !(value instanceof Array) && !(value instanceof Date) && !(value instanceof String) && !(value instanceof Boolean) && !(value instanceof Number)) {
+        var _return_value = {};
+        for (var k in value) {
+            if (value.hasOwnProperty(k)) {
+                _return_value[k] = tag(value[k]);
+            }
+        }
+        return _return_value;
+    } else if (value instanceof Array) {
+        var _return_value = value.map(function(v) { return tag(v); });
+        return _return_value;
+    } else if (typeof value === 'string') {
+        var _return_value = {'type': 'string', 'value': value};
+        return _return_value;
+    } else if (typeof value === 'boolean') {
+        var _return_value = {'type': 'bool', 'value': value.toString().toLowerCase()};
+        return _return_value;
+    } else if (typeof value === 'number' && Number.isSafeInteger(value) && value !== 1000000) {
+        var _return_value = {'type': 'integer', 'value': value.toString()};
+        return _return_value;
+    } else if (typeof value === 'number' && (!Number.isSafeInteger(value) || value === 1000000)) {
+        if (value === Infinity) {
+            var _return_value = {'type': 'float', 'value': "inf"};
+        }
+        else if (Number.isSafeInteger(value)) {
+            var _return_value = {'type': 'float', 'value': value.toString() + '.0'};
+        }
+        else{
+            var _return_value = {'type': 'float', 'value': value.toString()};
+        }
+        return _return_value;
+    } else if (value instanceof Date) {
+        
+        if (value.getUTCHours() === 0 && value.getUTCMinutes() === 0 && value.getUTCSeconds() === 0 && value.getUTCMilliseconds() === 0) {
+            var _return_value = {'type': 'date-local', 'value': value.toISOString().substring(0, 10)};
+        } 
+        else if (value.getUTCSeconds() === 0 && value.getUTCMilliseconds() === 0) {
+            var _tzinfo = value.tz.utcoffset("0")[0];
+            if (_tzinfo === 0){
+                var _return_value = {'type': 'datetime', 'value': value.toISOString().substring(0, 19) + "Z"};
+            }
+            else{
+                var offset = _tzinfo / 3600 / 1000;
+                var _return_value = {'type': 'datetime', 'value': value.toISOString().substring(0, 19) + "-0" + (-offset).toString() +  ":00"};
+            }
+        }
+        else{
+            var _tzinfo = value.tz.utcoffset("0")[0];
+            var offset = _tzinfo / 3600 / 1000;
+            var _return_value = {'type': 'datetime', 'value': value.toISOString().substring(0, 19) + "-0" + (-offset).toString() +  ":00"};
+        }
+        return _return_value;
+    } else {
+        throw new Error('Unknown type: ' + (typeof value));
+    }

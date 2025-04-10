@@ -1,0 +1,9 @@
+traces_all/
+__pycache__/
+__target__/
+eval_results/
+artifact_for_review/
+
+*_log.zip
+*.pyc
+evaluation.log

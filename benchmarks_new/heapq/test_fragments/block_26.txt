@@ -1,0 +1,8 @@
+tmp = test_heapreplace_help_function([6,1,-2,5], -5);
+    assert_equal(tmp, [-2, -5]);
+    tmp = test_heapreplace_help_function([34, -3, -12, 0], -13);
+    assert_equal(tmp, [-12, -13]);
+    tmp = test_heapreplace_help_function([5, 4, 3, 2, 1], 0);
+    assert_equal(tmp, [1, 0]);
+    tmp = test_heapreplace_help_function([4.7, 8, -1.2, 7.2], 9);
+    assert_equal(tmp, [-1.2, 4.7]);

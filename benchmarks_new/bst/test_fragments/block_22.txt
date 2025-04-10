@@ -1,0 +1,48 @@
+t = _get_binary_search_tree();
+
+    t.remove(13);
+
+    if (!(t.root !== null)) throw new Error("Assertion failed");
+    if (!(t.root.right !== null)) throw new Error("Assertion failed");
+    if (!(t.root.right.right !== null)) throw new Error("Assertion failed");
+    if (!(t.root.right.right.right === null)) throw new Error("Assertion failed");
+    if (!(t.root.right.right.left === null)) throw new Error("Assertion failed");
+
+    t.remove(7);
+
+    if (!(t.root.left !== null)) throw new Error("Assertion failed");
+    if (!(t.root.left.right !== null)) throw new Error("Assertion failed");
+    if (!(t.root.left.right.left !== null)) throw new Error("Assertion failed");
+    if (!(t.root.left.right.right === null)) throw new Error("Assertion failed");
+    if (!(t.root.left.right.left.label === 4)) throw new Error("Assertion failed");
+
+    t.remove(6);
+
+    if (!(t.root.left.left !== null)) throw new Error("Assertion failed");
+    if (!(t.root.left.right.right !== null)) throw new Error("Assertion failed");
+    if (!(t.root.left.left.label === 1)) throw new Error("Assertion failed");
+    if (!(t.root.left.right.label === 4)) throw new Error("Assertion failed");
+    if (!(t.root.left.right.right.label === 5)) throw new Error("Assertion failed");
+    if (!(t.root.left.right.left === null)) throw new Error("Assertion failed");
+    if (!(t.root.left.left.parent === t.root.left)) throw new Error("Assertion failed");
+    if (!(t.root.left.right.parent === t.root.left)) throw new Error("Assertion failed");
+
+    t.remove(3);
+
+    if (!(t.root !== null)) throw new Error("Assertion failed");
+    if (!(t.root.left.label === 4)) throw new Error("Assertion failed");
+    if (!(t.root.left.right.label === 5)) throw new Error("Assertion failed");
+    if (!(t.root.left.left.label === 1)) throw new Error("Assertion failed");
+    if (!(t.root.left.parent === t.root)) throw new Error("Assertion failed");
+    if (!(t.root.left.left.parent === t.root.left)) throw new Error("Assertion failed");
+    if (!(t.root.left.right.parent === t.root.left)) throw new Error("Assertion failed");
+
+    t.remove(4);
+
+    if (!(t.root.left !== null)) throw new Error("Assertion failed");
+    if (!(t.root.left.left !== null)) throw new Error("Assertion failed");
+    if (!(t.root.left.label === 5)) throw new Error("Assertion failed");
+    if (!(t.root.left.right === null)) throw new Error("Assertion failed");
+    if (!(t.root.left.left.label === 1)) throw new Error("Assertion failed");
+    if (!(t.root.left.parent === t.root)) throw new Error("Assertion failed");
+    if (!(t.root.left.left.parent === t.root.left)) throw new Error("Assertion failed");

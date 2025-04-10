@@ -1,0 +1,7 @@
+sim = OverlapCoefficient(2)
+    s1 = "car"
+    s2 = "bar"
+    assert_equal(1 / 2,
+    sim.similarity(s1, s2))
+    assert_equal(1 / 2,
+    sim.distance(s1, s2))

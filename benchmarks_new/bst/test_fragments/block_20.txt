@@ -1,0 +1,38 @@
+t = new BinarySearchTree();
+    if (!t.is_empty()) throw new Error('Assertion failed');
+
+    t.put(8);
+
+    if (t.root === null) throw new Error('Assertion failed');
+    if (t.root.parent !== null) throw new Error('Assertion failed');
+    if (t.root.label !== 8) throw new Error('Assertion failed');
+
+    t.put(10);
+
+    if (t.root.right === null) throw new Error('Assertion failed');
+    if (t.root.right.parent !== t.root) throw new Error('Assertion failed');
+    if (t.root.right.label !== 10) throw new Error('Assertion failed');
+
+    t.put(3);
+
+    if (t.root.left === null) throw new Error('Assertion failed');
+    if (t.root.left.parent !== t.root) throw new Error('Assertion failed');
+    if (t.root.left.label !== 3) throw new Error('Assertion failed');
+
+    t.put(6);
+
+    if (t.root.left.right === null) throw new Error('Assertion failed');
+    if (t.root.left.right.parent !== t.root.left) throw new Error('Assertion failed');
+    if (t.root.left.right.label !== 6) throw new Error('Assertion failed');
+
+    t.put(1);
+
+    if (t.root.left.left === null) throw new Error('Assertion failed');
+    if (t.root.left.left.parent !== t.root.left) throw new Error('Assertion failed');
+    if (t.root.left.left.label !== 1) throw new Error('Assertion failed');
+
+    try {
+        t.put(1);
+    } catch (exception) {
+        // Exception caught, do nothing
+    }

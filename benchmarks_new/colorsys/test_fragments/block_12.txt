@@ -1,0 +1,27 @@
+    _tmp = yiq_to_rgb(0.0, 1.0, 0.3)
+    _const = [1.0, 0.0, 0.0]
+    assert_iter_almost_equal(_tmp, _const)
+    _tmp = yiq_to_rgb(2.0, 0.0, 0.0)
+    _const = [1.0, 1.0, 1.0]
+    assert_iter_almost_equal(_tmp, _const)
+    _tmp = rgb_to_hls(0.5, 1.5, 0.2)
+    _const = [0.2948717948717949, 0.85, 4.333333333333333]
+    assert_iter_almost_equal(_tmp, _const)
+    _tmp = hls_to_rgb(0.5, 0.6, 0.2)
+    _const = [0.5199999999999999, 0.68, 0.68]
+    assert_iter_almost_equal(_tmp, _const)
+    _tmp = rgb_to_hsv(0.5, 1.5, 0.2)
+    _const = [0.2948717948717949, 0.8666666666666666, 1.5]
+    assert_iter_almost_equal(_tmp, _const)
+    _tmp = hsv_to_rgb(0.2, 0.6, 0.2)
+    _const = [0.176, 0.2, 0.08]
+    assert_iter_almost_equal(_tmp, _const)
+    _tmp = hsv_to_rgb(0.4, 0.6, 0.2)
+    _const = [0.08, 0.2, 0.128]
+    assert_iter_almost_equal(_tmp, _const)
+    _tmp = hsv_to_rgb(0.7, 0.6, 0.2)
+    _const = [0.10399999999999993, 0.08000000000000002, 0.2]
+    assert_iter_almost_equal(_tmp, _const)
+    _tmp = hsv_to_rgb(0.9, 0.6, 0.2)
+    _const = [0.2, 0.08000000000000002, 0.15199999999999997]
+    assert_iter_almost_equal(_tmp, _const)
