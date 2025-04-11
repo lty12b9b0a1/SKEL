@@ -1,5 +1,5 @@
 # SKEL: Program Translator via Skeleton Generation
-Paper: **Program Skeletons for Automated Program Translation** in PLDI 2025
+Paper: [**Program Skeletons for Automated Program Translation**](https://arxiv.org/pdf/2504.07483) in PLDI 2025
 
 # License
 The main part of the code is under MIT license. Some dependencies and datasets are under other licenses. See [DEPENDENCY.md](./DEPENDENCY.md) for details.
