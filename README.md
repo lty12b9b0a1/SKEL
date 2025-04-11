@@ -1,4 +1,5 @@
 # SKEL: Program Translator via Skeleton Generation
+Paper: **Program Skeletons for Automated Program Translation** in PLDI 2025
 
 ## Introduction
 
