@@ -1,6 +1,9 @@
 # SKEL: Program Translator via Skeleton Generation
 Paper: **Program Skeletons for Automated Program Translation** in PLDI 2025
 
+# License
+The main part of the code is under MIT license. Some dependencies and datasets are under other licenses. See [DEPENDENCY.md](./DEPENDENCY.md) for details.
+
 ## Introduction
 
 `SKEL` is a tool for (mostly) automated program translation from Python to JavaScript. It requires a Python program with whole-program tests as input and produces a complete JavaScript translation that has the equivalent behavior on provided tests.
